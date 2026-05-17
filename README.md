@@ -12,7 +12,7 @@
 **Chat with your local files. Privately. Offline. Always.**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
+[![License: DEV SUTHAR](https://img.shields.io/badge/License-DEVSUTHAR-22c55e?style=flat-square)](LICENSE)
 [![FAISS](https://img.shields.io/badge/Vector_Store-FAISS-FF6F00?style=flat-square)](https://github.com/facebookresearch/faiss)
 [![llama.cpp](https://img.shields.io/badge/Runtime-llama.cpp-8B5CF6?style=flat-square)](https://github.com/ggerganov/llama.cpp)
 [![Stars](https://img.shields.io/github/stars/yourusername/localmind?style=flat-square&color=f59e0b)](https://github.com/yourusername/localmind)
