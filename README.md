@@ -265,4 +265,4 @@ Contributions are very welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guide
 
 ## License
 
-MIT © 2025. See [LICENSE](LICENSE).
+DEV SUTHAR ©2026. See [LICENSE](LICENSE).
