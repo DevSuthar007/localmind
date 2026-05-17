@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "localmind"
+version = "0.1.0"
+description = "Fully offline RAG engine — chat with your local files using open-source LLMs"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["rag", "llm", "llama", "faiss", "offline", "privacy", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "llama-cpp-python>=0.2.57",
+    "faiss-cpu>=1.7.4",
+    "sentence-transformers>=2.6.0",
+    "rank-bm25>=0.2.2",
+    "pypdf>=4.1.0",
+    "rich>=13.7.0",
+    "typer>=0.12.0",
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.29.0",
+    "tomli>=2.0.1; python_version < '3.11'",
+    "tomllib>=2.0.0; python_version >= '3.11'",
+    "pydantic>=2.6.0",
+    "numpy>=1.26.0",
+    "tqdm>=4.66.0",
+    "httpx>=0.27.0",
+    "structlog>=24.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+    "pre-commit>=3.7.0",
+]
+gpu = [
+    "faiss-gpu>=1.7.4",
+]
+
+[project.scripts]
+localmind = "localmind.ui.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/localmind"
+Issues = "https://github.com/yourusername/localmind/issues"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--cov=localmind --cov-report=term-missing"
